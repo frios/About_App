@@ -52,15 +52,21 @@ public struct AboutInfoView : View {
                             .linkImageModifier()
                     })
                 }
-                if let twitter = about.twitter {
-                    Link(destination: URL(string: twitter)!, label: {
-                        Image("Twitter", bundle: Bundle.module)
+                if let instagram = about.instagram {
+                    Link(destination: URL(string: instagram)!, label: {
+                        Image("Instagram", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
                 if let facebook = about.facebook {
                     Link(destination: URL(string: facebook)!, label: {
                         Image("Facebook", bundle: Bundle.module)
+                            .linkImageModifier()
+                    })
+                }
+                if let twitter = about.twitter {
+                    Link(destination: URL(string: twitter)!, label: {
+                        Image("Twitter", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
