@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct AboutLogoView : View {
+public struct AboutLogoView : View {
     @EnvironmentObject var about : About
     
-    var body : some View {
+    public var body : some View {
         Text(about.appName)
             .font(.largeTitle)
         Image(about.logo)

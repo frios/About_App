@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-class About : ObservableObject {
+public class About : ObservableObject {
     @Published var isPortrait : Bool = true
     
     let appName = "PoshBoard"

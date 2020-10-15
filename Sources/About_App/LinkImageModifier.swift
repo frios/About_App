@@ -11,7 +11,7 @@ import SwiftUI
 
 extension Image {
     
-    func linkImageModifier() -> some View {
+    public func linkImageModifier() -> some View {
         self
             .resizable()
             .renderingMode(.template)

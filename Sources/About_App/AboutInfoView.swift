@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct AboutInfoView : View {
+public struct AboutInfoView : View {
     @EnvironmentObject var about : About
     
-    var body : some View {
+    public var body : some View {
         VStack (spacing: 20) {
             Text("Version: \(about.version)")
                 .font(.caption)

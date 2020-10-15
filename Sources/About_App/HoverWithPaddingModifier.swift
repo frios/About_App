@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct HoverWithPaddingModifier: ViewModifier {
-    func body(content: Content) -> some View {
+public struct HoverWithPaddingModifier: ViewModifier {
+    public func body(content: Content) -> some View {
         content
             .padding(6)
             .background(Color.clear)

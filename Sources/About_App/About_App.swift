@@ -9,11 +9,11 @@
 import SwiftUI
 
 
-struct AboutView: View {
+public struct AboutView: View {
     
     @EnvironmentObject var about : About
 
-    var body: some View {
+    public var body: some View {
         ScrollView {
             VStack (alignment: .center) {
                 AboutLogoView()
