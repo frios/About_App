@@ -46,7 +46,7 @@ public struct AboutInfoView : View {
                 }
             }
             
-            HStack (spacing: 20){
+            HStack (alignment: .center, spacing: 20){
                 if let webURL = about.webURL {
                     Link(destination: URL(string: webURL)!, label: {
                         Image("Home")
