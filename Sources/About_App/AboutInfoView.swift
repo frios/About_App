@@ -66,7 +66,7 @@ public struct AboutInfoView : View {
                 }
                 if let linkedin = about.linkedin {
                     Link(destination: URL(string: linkedin)!, label: {
-                        Image("LinkedIn", bundle: Bundle.module)
+                        Image("Linked_In", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
