@@ -33,12 +33,12 @@ public class About : ObservableObject {
     let reviewString = "itms-apps://itunes.apple.com/app/id\(appID)?action=write-review&mt=8"
     let color = Color(UIColor(named: "app_color")!)
     
-    init () {
+    public init () {
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
-    @objc func rotated() {
+    @objc public func rotated() {
         switch UIDevice.current.orientation {
         case .faceDown, .faceUp, .portrait, .portraitUpsideDown, .unknown:
             self.isPortrait = true
