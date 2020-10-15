@@ -48,25 +48,25 @@ public struct AboutInfoView : View {
             HStack (alignment: .center, spacing: 20){
                 if let webURL = about.webURL {
                     Link(destination: URL(string: webURL)!, label: {
-                        Image("Home")
+                        Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
                 if let twitter = about.twitter {
                     Link(destination: URL(string: twitter)!, label: {
-                        Image("Twitter")
+                        Image("Twitter", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
                 if let facebook = about.facebook {
                     Link(destination: URL(string: facebook)!, label: {
-                        Image("Facebook")
+                        Image("Facebook", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
                 if let linkedin = about.linkedin {
                     Link(destination: URL(string: linkedin)!, label: {
-                        Image("LinkedIn")
+                        Image("LinkedIn", bundle: Bundle.module)
                             .linkImageModifier()
                     })
                 }
