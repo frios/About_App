@@ -30,8 +30,8 @@ public struct AboutView: View {
 
 
 
-struct AboutView_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutView().environmentObject(About())
-    }
-}
+//struct AboutView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AboutView().environmentObject(About())
+//    }
+//}
