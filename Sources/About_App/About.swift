@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+
 public class About : ObservableObject {
     @Published var isPortrait : Bool = true
     
