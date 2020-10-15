@@ -13,6 +13,8 @@ public struct AboutView: View {
     
     @EnvironmentObject var about : About
 
+    public init() {}
+    
     public var body: some View {
         ScrollView {
             VStack (alignment: .center) {
