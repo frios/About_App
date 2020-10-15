@@ -1,6 +1,5 @@
 //
 //  About.swift
-//  PoshBoard
 //
 //  Created by Ferdinand Rios on 11/20/19.
 //  Copyright © 2019 SAPIEN Technologies, Inc. All rights reserved.
@@ -11,6 +10,26 @@ import SwiftUI
 
 
 public class About : ObservableObject {
+    static let sampleData = About(
+        appName: "PoshBoard",
+        createdBy: "Ferdinand G. Rios",
+        copyRight: "© 2020, SAPIEN Technologies, Inc.",
+        reservedRights: "All Rights Reserved",
+        companyName: "SAPIEN Technologies, Inc.",
+        address1: "831 Latour Court",
+        address2: "Suite B3",
+        city: "Napa",
+        state: "CA",
+        zip: "94558",
+        webURL: "https://www.sapien.com",
+        twitter: "https://twitter.com/SAPIENTech",
+        facebook: "https://www.facebook.com/SAPIENTech",
+        linkedin: "https://www.linkedin.com/company/122015/",
+        instagram: nil,
+        supportString: "https://www.sapien.com/forums/viewforum.php?f=17&sid=6d704b7407c3e241400b9a2b805e4978",
+        reviewString: "itms-apps://itunes.apple.com/app/id122122122?action=write-review&mt=8"
+    )
+
     @Published var isPortrait : Bool = true
     
     var appName: String?

@@ -1,6 +1,5 @@
 //
 //  LinkImageModifier.swift
-//  PoshBoard
 //
 //  Created by Feldy Rios on 9/28/20.
 //  Copyright © 2020 SAPIEN Technologies, Inc. All rights reserved.

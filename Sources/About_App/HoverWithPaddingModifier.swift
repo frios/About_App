@@ -1,6 +1,5 @@
 //
 //  HoverWithPaddingModifier.swift
-//  PoshBoard
 //
 //  Created by Ferdinand Rios on 5/1/20.
 //  Copyright © 2020 SAPIEN Technologies, Inc. All rights reserved.

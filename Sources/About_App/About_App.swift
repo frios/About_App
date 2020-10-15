@@ -1,6 +1,5 @@
 //
 //  AboutView.swift
-//  PoshBoard
 //
 //  Created by Ferdinand Rios on 10/25/19.
 //  Copyright © 2019 SAPIEN Technologies, Inc. All rights reserved.
@@ -30,8 +29,8 @@ public struct AboutView: View {
 
 
 
-//struct AboutView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AboutView().environmentObject(About())
-//    }
-//}
+struct AboutView_Previews: PreviewProvider {
+    static var previews: some View {
+        AboutView().environmentObject(About.sampleData)
+    }
+}

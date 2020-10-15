@@ -1,6 +1,5 @@
 //
 //  InfoView.swift
-//  PoshBoard
 //
 //  Created by Ferdinand Rios on 4/23/20.
 //  Copyright © 2020 SAPIEN Technologies, Inc. All rights reserved.
