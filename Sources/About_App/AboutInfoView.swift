@@ -18,49 +18,75 @@ public struct AboutInfoView : View {
                 .fontWeight(.bold)
             
             VStack() {
-                Text(about.copyRight)
-                Text(about.reservedRights)
+                if let copyRight = about.copyRight {
+                    Text(copyRight)
+                }
+                if let reservedRights = about.reservedRights {
+                    Text(reservedRights)
+                }
             }
             .font(.headline)
             
             VStack() {
-                Text("Created by:")
-                Text(about.createdBy)
-                Text(about.companyName)
-                Text(about.address1)
-                Text(about.address2)
-                Text("\(about.city), \(about.state) \(about.zip)")
+                if let createdBy = about.createdBy {
+                    Text("Created by:")
+                    Text(createdBy)
+                }
+                if let companyName = about.companyName {
+                    Text(companyName)
+                }
+                if let address1 = about.address1 {
+                    Text(address1)
+                }
+                if let address2 = about.address2 {
+                    Text(address2)
+                }
+                if let city = about.city, let state = about.state, let zip = about.zip {
+                    Text("\(city), \(state) \(zip)")
+                }
             }
             
             HStack (spacing: 20){
-                Link(destination: URL(string: about.webURL)!, label: {
-                    Image("Home")
-                        .linkImageModifier()
-                })
-                Link(destination: URL(string: about.twitter)!, label: {
-                    Image("Twitter")
-                        .linkImageModifier()
-                })
-                Link(destination: URL(string: about.facebook)!, label: {
-                    Image("Facebook")
-                        .linkImageModifier()
-                })
-                Link(destination: URL(string: about.linkedIn)!, label: {
-                    Image("LinkedIn")
-                        .linkImageModifier()
-                })
+                if let webURL = about.webURL {
+                    Link(destination: URL(string: webURL)!, label: {
+                        Image("Home")
+                            .linkImageModifier()
+                    })
+                }
+                if let twitter = about.twitter {
+                    Link(destination: URL(string: twitter)!, label: {
+                        Image("Twitter")
+                            .linkImageModifier()
+                    })
+                }
+                if let facebook = about.facebook {
+                    Link(destination: URL(string: facebook)!, label: {
+                        Image("Facebook")
+                            .linkImageModifier()
+                    })
+                }
+                if let linkedIn = about.linkedIn {
+                    Link(destination: URL(string: linkedIn)!, label: {
+                        Image("LinkedIn")
+                            .linkImageModifier()
+                    })
+                }
             }
             .foregroundColor(about.color)
             
             VStack(spacing: 5) {
                 HStack (spacing: 10){
-                    Link("Get support", destination: URL(string: about.supportString)!)
-                        .hoverWithPaddingModifier()
+                    if let supportString = about.supportString {
+                        Link("Get support", destination: URL(string: supportString)!)
+                            .hoverWithPaddingModifier()
+                    }
 
-                    Text("-")
-                    
-                    Link("Write a review", destination: URL(string: about.reviewString)!)
-                        .hoverWithPaddingModifier()
+                    Text("  ")
+
+                    if let reviewString = about.reviewString {
+                        Link("Write a review", destination: URL(string: reviewString)!)
+                            .hoverWithPaddingModifier()
+                    }
                 }
             }
             .font(.subheadline)
