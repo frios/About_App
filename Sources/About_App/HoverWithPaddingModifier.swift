@@ -12,7 +12,7 @@ public struct HoverWithPaddingModifier: ViewModifier {
         content
             .padding(6)
             .contentShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
-//            .hoverEffect(.highlight)
+            .hoverEffect(.highlight)
     }
 }
 
