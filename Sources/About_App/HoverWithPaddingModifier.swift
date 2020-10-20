@@ -11,8 +11,7 @@ public struct HoverWithPaddingModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .padding(6)
-//            .background(Color.clear)
-            .contentShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+//            .contentShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
             .hoverEffect(.highlight)
     }
 }
