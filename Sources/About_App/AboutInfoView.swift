@@ -50,6 +50,7 @@ public struct AboutInfoView : View {
                     Link(destination: URL(string: webURL)!, label: {
                         Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
+                            .hoverEffect(.highlight)
                     })
                 }
                 if let instagram = about.instagram {
