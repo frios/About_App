@@ -51,8 +51,6 @@ public struct AboutInfoView : View {
                         Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
                     })
-                    .allowsHitTesting(false)
-
                 }
                 if let instagram = about.instagram {
                     Link(destination: URL(string: instagram)!, label: {
