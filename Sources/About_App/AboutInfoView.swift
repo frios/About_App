@@ -50,32 +50,36 @@ public struct AboutInfoView : View {
                     Link(destination: URL(string: webURL)!, label: {
                         Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
-                    })            .hoverWithPaddingModifier()
-
+                    })
+                    .hoverWithPaddingModifier()
                 }
                 if let instagram = about.instagram {
                     Link(destination: URL(string: instagram)!, label: {
                         Image("Instagram", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+                    .hoverWithPaddingModifier()
                 }
                 if let facebook = about.facebook {
                     Link(destination: URL(string: facebook)!, label: {
                         Image("Facebook", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+                    .hoverWithPaddingModifier()
                 }
                 if let twitter = about.twitter {
                     Link(destination: URL(string: twitter)!, label: {
                         Image("Twitter", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+                    .hoverWithPaddingModifier()
                 }
                 if let linkedin = about.linkedin {
                     Link(destination: URL(string: linkedin)!, label: {
                         Image("Linked_In", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+                    .hoverWithPaddingModifier()
                 }
             }
             .foregroundColor(about.color)
