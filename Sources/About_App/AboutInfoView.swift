@@ -50,7 +50,8 @@ public struct AboutInfoView : View {
                     Link(destination: URL(string: webURL)!, label: {
                         Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
-                    })
+                    })            .hoverWithPaddingModifier()
+
                 }
                 if let instagram = about.instagram {
                     Link(destination: URL(string: instagram)!, label: {
