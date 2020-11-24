@@ -16,6 +16,5 @@ extension Image {
             .renderingMode(.template)
             .frame(width: 30, height: 30)
             .aspectRatio(contentMode: .fit)
-//            .hoverWithPaddingModifier()
     }
 }
