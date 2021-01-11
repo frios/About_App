@@ -91,8 +91,6 @@ public struct AboutInfoView : View {
                             .hoverWithPaddingModifier()
                     }
 
-//                    Text("  ")
-
                     if let reviewString = about.reviewString {
                         Link("Write a review", destination: URL(string: reviewString)!)
                             .hoverWithPaddingModifier()
