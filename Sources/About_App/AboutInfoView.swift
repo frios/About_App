@@ -84,14 +84,14 @@ public struct AboutInfoView : View {
             }
             .foregroundColor(about.color)
             
-            VStack(spacing: 5) {
+            VStack(alignment: .center, spacing: 5) {
                 HStack (spacing: 10){
                     if let supportString = about.supportString {
                         Link("Get support", destination: URL(string: supportString)!)
                             .hoverWithPaddingModifier()
                     }
 
-                    Text("  ")
+//                    Text("  ")
 
                     if let reviewString = about.reviewString {
                         Link("Write a review", destination: URL(string: reviewString)!)
