@@ -31,7 +31,7 @@ public class About : ObservableObject {
     public var supportString: String?
     public var reviewString: String?
     
-    let color = Color(UIColor(named: "app_color")!)
+    let color = Color(UIColor(named: "AccentColor")!)
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
     let logo = "app_logo"
 
