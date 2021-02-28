@@ -32,7 +32,7 @@ public class About : ObservableObject {
     public var reviewString: String?
     
     let color = Color(UIColor(named: "AccentColor")!)
-    let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
+    let version = "\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
     let logo = "app_logo"
 
     public init () {
