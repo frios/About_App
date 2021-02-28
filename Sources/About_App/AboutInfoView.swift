@@ -12,7 +12,7 @@ public struct AboutInfoView : View {
     
     public var body : some View {
         VStack (spacing: 20) {
-            Text("Version: \(about.version)")
+            Text("\(about.version)")
                 .font(.caption)
                 .fontWeight(.bold)
             
