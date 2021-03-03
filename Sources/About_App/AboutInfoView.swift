@@ -23,6 +23,9 @@ public struct AboutInfoView : View {
                 if let reservedRights = about.reservedRights {
                     Text(reservedRights)
                 }
+                if let misc = about.misc {
+                    Text(misc)
+                }
             }
             .font(.headline)
             

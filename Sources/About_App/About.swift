@@ -17,6 +17,7 @@ public class About : ObservableObject {
     public var createdBy: String?
     public var copyRight: String?
     public var reservedRights: String?
+    public var misc: String?
     public var companyName: String?
     public var address1: String?
     public var address2: String?
