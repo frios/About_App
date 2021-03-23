@@ -35,6 +35,7 @@ public class About : ObservableObject {
     let color = Color(UIColor(named: "AccentColor")!)
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
     let logo = "AppLogo"
+    
 
     public init () {
         self.isPortrait =  UIDevice.current.orientation.isPortrait
