@@ -16,7 +16,7 @@ public struct AboutInfoView : View {
                 .font(.caption)
                 .fontWeight(.bold)
             
-            VStack() {
+            VStack(alignment: .center) {
                 if let copyRight = about.copyRight {
                     Text(copyRight)
                 }
