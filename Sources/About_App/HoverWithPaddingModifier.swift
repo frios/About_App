@@ -5,6 +5,7 @@
 //  Copyright © 2020 SAPIEN Technologies, Inc. All rights reserved.
 //
 
+#if os(iOS)
 import SwiftUI
 
 public struct HoverWithPaddingModifier: ViewModifier {
@@ -21,3 +22,4 @@ extension View {
         self.modifier(HoverWithPaddingModifier())
     }
 }
+#endif
