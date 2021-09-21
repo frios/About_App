@@ -40,12 +40,14 @@ public class About : ObservableObject {
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
     let logo = "AppLogo"
     
-#if os(iOS)
     public init () {
+#if os(iOS)
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+#endif
     }
     
+#if os(iOS)
     @objc public func rotated() {
         switch UIDevice.current.orientation {
         case .faceDown, .faceUp, .portrait, .portraitUpsideDown, .unknown:
