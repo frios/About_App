@@ -55,35 +55,45 @@ public struct AboutInfoView : View {
                         Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+#if os(iOS)
                     .hoverWithPaddingModifier()
+#endif
                 }
                 if let instagram = about.instagram {
                     Link(destination: URL(string: instagram)!, label: {
                         Image("Instagram", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+#if os(iOS)
                     .hoverWithPaddingModifier()
+#endif
                 }
                 if let facebook = about.facebook {
                     Link(destination: URL(string: facebook)!, label: {
                         Image("Facebook", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+#if os(iOS)
                     .hoverWithPaddingModifier()
+#endif
                 }
                 if let twitter = about.twitter {
                     Link(destination: URL(string: twitter)!, label: {
                         Image("Twitter", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+#if os(iOS)
                     .hoverWithPaddingModifier()
+#endif
                 }
                 if let linkedin = about.linkedin {
                     Link(destination: URL(string: linkedin)!, label: {
                         Image("Linked_In", bundle: Bundle.module)
                             .linkImageModifier()
                     })
+#if os(iOS)
                     .hoverWithPaddingModifier()
+#endif
                 }
             }
             .foregroundColor(about.color)
@@ -92,12 +102,16 @@ public struct AboutInfoView : View {
                 HStack (spacing: 10){
                     if let supportString = about.supportString {
                         Link("Get support", destination: URL(string: supportString)!)
-                            .hoverWithPaddingModifier()
+#if os(iOS)
+                    .hoverWithPaddingModifier()
+#endif
                     }
 
                     if let reviewString = about.reviewString {
                         Link("Write a review", destination: URL(string: reviewString)!)
-                            .hoverWithPaddingModifier()
+#if os(iOS)
+                    .hoverWithPaddingModifier()
+#endif
                     }
                 }
             }
