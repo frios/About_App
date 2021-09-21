@@ -32,11 +32,15 @@ public class About : ObservableObject {
     public var supportString: String?
     public var reviewString: String?
     
+#if os(iOS)
     let color = Color(UIColor(named: "AccentColor")!)
+#elseif os(macOS)
+    let color = Color(NSColor(named: "AccentColor")!)
+#endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
     let logo = "AppLogo"
     
-
+#if os(iOS)
     public init () {
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
@@ -50,4 +54,5 @@ public class About : ObservableObject {
             self.isPortrait = false
         }
     }
+#endif
 }
