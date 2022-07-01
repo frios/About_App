@@ -31,7 +31,6 @@ public class About : ObservableObject {
     public var instagram: String?
     public var supportString: String?
     public var reviewString: String?
-    public var logo: String?
     
 #if os(iOS)
     let color = Color(UIColor(named: "AccentColor")!)
@@ -39,12 +38,16 @@ public class About : ObservableObject {
     let color = Color(NSColor(named: "AccentColor")!)
 #endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
+    let logo = Bundle.main.appIcon
+
+    
     
     public init () {
 #if os(iOS)
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
 #endif
+
     }
     
 #if os(iOS)
@@ -57,4 +60,17 @@ public class About : ObservableObject {
         }
     }
 #endif
+}
+
+
+extension Bundle {
+    public var appIcon: UIImage? {
+        if let appIcons = infoDictionary?["CFBundleIcons"] as? [String: Any],
+            let primaryAppIcon = appIcons["CFBundlePrimaryIcon"] as? [String: Any],
+            let appIconFiles = primaryAppIcon["CFBundleIconFiles"] as? [String],
+            let lastAppIcon = appIconFiles.last {
+            return UIImage(named:lastAppIcon)
+        }
+        return nil
+    }
 }
