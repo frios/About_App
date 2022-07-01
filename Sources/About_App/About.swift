@@ -31,6 +31,7 @@ public class About : ObservableObject {
     public var instagram: String?
     public var supportString: String?
     public var reviewString: String?
+    public var logo: String?
     
 #if os(iOS)
     let color = Color(UIColor(named: "AccentColor")!)
@@ -38,7 +39,6 @@ public class About : ObservableObject {
     let color = Color(NSColor(named: "AccentColor")!)
 #endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
-    let logo = "AppLogo"
     
     public init () {
 #if os(iOS)
