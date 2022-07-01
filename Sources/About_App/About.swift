@@ -72,7 +72,7 @@ extension Bundle {
             let primaryAppIcon = appIcons["CFBundlePrimaryIcon"] as? [String: Any],
             let appIconFiles = primaryAppIcon["CFBundleIconFiles"] as? [String],
             let lastAppIcon = appIconFiles.last {
-                let iconImage = UIImage(named:lastAppIcon)
+                let iconImage = UIImage(named:lastAppIcon, in: Bundle.main, compatibleWith: nil)
                 return iconImage
             }
         return nil
