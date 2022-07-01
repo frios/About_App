@@ -38,16 +38,19 @@ public class About : ObservableObject {
     let color = Color(NSColor(named: "AccentColor")!)
 #endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
-    let logo = Bundle.main.appIcon
+    var logo: UIImage = UIImage()
 
-    
     
     public init () {
 #if os(iOS)
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
 #endif
-
+        if let myLogo = Bundle.main.appIcon {
+            logo = myLogo
+        } else {
+            logo = UIImage(named: "DefaultIcon")!
+        }
     }
     
 #if os(iOS)

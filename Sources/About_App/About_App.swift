@@ -10,7 +10,6 @@ import SwiftUI
 public struct AboutView: View {
     
     @EnvironmentObject var about : About
-    @State private var appIcon: UIImage?
 
     public init() {
     }

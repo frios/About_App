@@ -15,7 +15,7 @@ public struct AboutLogoView : View {
         Text(appName)
             .font(.largeTitle)
         }
-        Image(uiImage: about.logo!)
+        Image(uiImage: about.logo)
             .resizable()
             .frame(width: 200.0, height: 200.0)
             .cornerRadius(20)
