@@ -38,7 +38,7 @@ public class About : ObservableObject {
     let color = Color(NSColor(named: "AccentColor")!)
 #endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
-    var logo: UIImage = UIImage()
+    var logo: UIImage = Bundle.main.appIcon!
 
     
     public init () {
@@ -46,11 +46,11 @@ public class About : ObservableObject {
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
 #endif
-        if let myLogo = Bundle.main.appIcon {
-            logo = myLogo
-        } else {
-            logo = UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
-        }
+//        if let myLogo = Bundle.main.appIcon {
+//            logo = myLogo
+//        } else {
+//            logo = UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
+//        }
     }
     
 #if os(iOS)
@@ -75,6 +75,6 @@ extension Bundle {
                 let iconImage = UIImage(named:lastAppIcon, in: Bundle.main, compatibleWith: nil)
                 return iconImage
             }
-        return nil
+        return UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
     }
 }
