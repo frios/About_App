@@ -49,7 +49,7 @@ public class About : ObservableObject {
         if let myLogo = Bundle.main.appIcon {
             logo = myLogo
         } else {
-            logo = UIImage(named: "DefaultIcon")!
+            logo = UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
         }
     }
     
