@@ -39,7 +39,7 @@ public class About : ObservableObject {
     let color = Color(NSColor(named: "AccentColor")!)
 #endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
-    var logo: UIImage = Bundle.main.AppLogo
+    var logo: UIImage = Bundle.main.appIcon
 
     
     public init () {
@@ -63,7 +63,7 @@ public class About : ObservableObject {
 
 
 extension Bundle {
-    public var appIcon: UIImage? {
+    public var appIcon: UIImage {
         if let appIcons = infoDictionary?["CFBundleIcons"] as? [String: Any],
            let primaryAppIcon = appIcons["CFBundlePrimaryIcon"] as? [String: Any],
            let appIconFiles = primaryAppIcon["CFBundleIconFiles"] as? [String],
@@ -75,6 +75,5 @@ extension Bundle {
             }
         }
         return UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
-        
     }
 }
