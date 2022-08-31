@@ -64,16 +64,21 @@ public class About : ObservableObject {
 
 extension Bundle {
     public var appIcon: UIImage {
-        if let appIcons = infoDictionary?["CFBundleIcons"] as? [String: Any],
-           let primaryAppIcon = appIcons["CFBundlePrimaryIcon"] as? [String: Any],
-           let appIconFiles = primaryAppIcon["CFBundleIconFiles"] as? [String],
-           let lastAppIcon = appIconFiles.last {
-            if let iconImage = UIImage(named:lastAppIcon, in: Bundle.main, compatibleWith: nil) {
-                return iconImage
-            } else {
-                return UIImage(named: "AppIcon76x76@2x~ipad.png", in: Bundle.main, with: nil)!
-            }
+        if let logoImage = UIImage(named:"AppLogo", in: Bundle.main, compatibleWith: nil) {
+            return logoImage
+        } else {
+            return UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
         }
-        return UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
+//        if let appIcons = infoDictionary?["CFBundleIcons"] as? [String: Any],
+//           let primaryAppIcon = appIcons["CFBundlePrimaryIcon"] as? [String: Any],
+//           let appIconFiles = primaryAppIcon["CFBundleIconFiles"] as? [String],
+//           let lastAppIcon = appIconFiles.last {
+//            if let iconImage = UIImage(named:lastAppIcon, in: Bundle.main, compatibleWith: nil) {
+//                return iconImage
+//            } else {
+//                return UIImage(named: "AppIcon76x76@2x~ipad.png", in: Bundle.main, with: nil)!
+//            }
+//        }
+//        return UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
     }
 }
