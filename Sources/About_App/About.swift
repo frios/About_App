@@ -71,7 +71,7 @@ extension Bundle {
             if let iconImage = UIImage(named:lastAppIcon, in: Bundle.main, compatibleWith: nil) {
                 return iconImage
             } else {
-                return UIImage(named: "AppIcon76x76@2x~ipad", in: Bundle.module, with: nil)!
+                return UIImage(named: "AppIcon76x76@2x~ipad", in: Bundle.main, with: nil)!
             }
         }
         return UIImage(named: "DefaultIcon", in: Bundle.module, with: nil)!
