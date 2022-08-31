@@ -39,7 +39,7 @@ public class About : ObservableObject {
     let color = Color(NSColor(named: "AccentColor")!)
 #endif
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
-    var logo: UIImage = Bundle.main.AppIcon!
+    var logo: UIImage = Bundle.main.appIcon!
 
     
     public init () {
