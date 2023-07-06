@@ -18,7 +18,9 @@ public struct AboutView: View {
         ScrollView {
             VStack (alignment: .center) {
                 AboutLogoView()
+                    .environment(about)
                 AboutInfoView()
+                    .environment(about)
                 Spacer()
             }
             .padding(.top, 20)
