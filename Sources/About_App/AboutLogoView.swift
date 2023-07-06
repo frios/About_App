@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct AboutLogoView : View {
-    @EnvironmentObject var about : About
+    @Environment(About.self) var about
     
     public var body : some View {
         if let appName = about.appName {
@@ -23,8 +23,6 @@ public struct AboutLogoView : View {
     }
 }
 
-struct LogoView_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutLogoView()
-    }
+#Preview {
+    AboutLogoView().environment(About())
 }

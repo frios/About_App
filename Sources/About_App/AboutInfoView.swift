@@ -8,8 +8,8 @@
 import SwiftUI
 
 public struct AboutInfoView : View {
-    @EnvironmentObject var about : About
-    
+    @Environment(About.self) var about
+
     public var body : some View {
         VStack (spacing: 20) {
             Text("\(about.version)")
@@ -120,8 +120,7 @@ public struct AboutInfoView : View {
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutInfoView()
-    }
+#Preview {
+    AboutInfoView()
+        .environment(About())
 }

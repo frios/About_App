@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct AboutView: View {
     
-    @EnvironmentObject var about : About
+    @Environment(About.self) var about
 
     public init() {
     }
@@ -27,3 +27,7 @@ public struct AboutView: View {
 }
 
 
+#Preview {
+    AboutView()
+        .environment(About())
+}

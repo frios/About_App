@@ -1,6 +1,6 @@
 # About_App
 
-About_App is a drop-in About Page. It displays a single page with a product logo and additional information. It also handles rotation to landscape properly.
+About_App is a drop-in About Page. It displays a single page with a product logo and additional information. It also handles rotation to landscape properly. The current implementation uses the Swift 5.9 Observation model and requires iOS 17 or macOS 13.
 
 To use:
 
@@ -44,5 +44,5 @@ Display the page and pass the About object into the environment.
 
 ```
 AboutView()
-    .environmentObject(about)
+    .environment(about)
 ```
