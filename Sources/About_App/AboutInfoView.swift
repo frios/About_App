@@ -17,41 +17,41 @@ public struct AboutInfoView : View {
                 .fontWeight(.bold)
             
             VStack() {
-                if let copyRight = about.copyRight {
-                    Text(copyRight)
+                if about.copyRight != "" {
+                    Text(about.copyRight)
                 }
-                if let reservedRights = about.reservedRights {
-                    Text(reservedRights)
+                if about.reservedRights != "" {
+                    Text(about.reservedRights)
                 }
-                if let misc = about.misc {
-                    Text(misc)
+                if about.misc != "" {
+                    Text(about.misc)
                         .multilineTextAlignment(.center)
                 }
             }
             .font(.headline)
             
             VStack() {
-                if let createdBy = about.createdBy {
+                if about.createdBy != "" {
                     Text("Created by:")
-                    Text(createdBy)
+                    Text(about.createdBy)
                 }
-                if let companyName = about.companyName {
-                    Text(companyName)
+                if about.companyName != "" {
+                    Text(about.companyName)
                 }
-                if let address1 = about.address1 {
-                    Text(address1)
+                if about.address1 != "" {
+                    Text(about.address1)
                 }
-                if let address2 = about.address2 {
-                    Text(address2)
+                if about.address2 != "" {
+                    Text(about.address2)
                 }
-                if let city = about.city, let state = about.state, let zip = about.zip {
-                    Text("\(city), \(state) \(zip)")
+                if about.city != "" || about.state != "" || about.zip != "" {
+                    Text("\(about.city), \(about.state) \(about.zip)")
                 }
             }
             
             HStack (alignment: .center, spacing: 20){
-                if let webURL = about.webURL {
-                    Link(destination: URL(string: webURL)!, label: {
+                if about.webURL != "" {
+                    Link(destination: URL(string: about.webURL)!, label: {
                         Image("Home", bundle: Bundle.module)
                             .linkImageModifier()
                     })
@@ -59,8 +59,8 @@ public struct AboutInfoView : View {
                     .hoverWithPaddingModifier()
 #endif
                 }
-                if let instagram = about.instagram {
-                    Link(destination: URL(string: instagram)!, label: {
+                if about.instagram != "" {
+                    Link(destination: URL(string: about.instagram)!, label: {
                         Image("Instagram", bundle: Bundle.module)
                             .linkImageModifier()
                     })
@@ -68,8 +68,8 @@ public struct AboutInfoView : View {
                     .hoverWithPaddingModifier()
 #endif
                 }
-                if let facebook = about.facebook {
-                    Link(destination: URL(string: facebook)!, label: {
+                if about.facebook != "" {
+                    Link(destination: URL(string: about.facebook)!, label: {
                         Image("Facebook", bundle: Bundle.module)
                             .linkImageModifier()
                     })
@@ -77,8 +77,8 @@ public struct AboutInfoView : View {
                     .hoverWithPaddingModifier()
 #endif
                 }
-                if let twitter = about.twitter {
-                    Link(destination: URL(string: twitter)!, label: {
+                if about.twitter != "" {
+                    Link(destination: URL(string: about.twitter)!, label: {
                         Image("Twitter", bundle: Bundle.module)
                             .linkImageModifier()
                     })
@@ -86,8 +86,8 @@ public struct AboutInfoView : View {
                     .hoverWithPaddingModifier()
 #endif
                 }
-                if let linkedin = about.linkedin {
-                    Link(destination: URL(string: linkedin)!, label: {
+                if about.linkedin != "" {
+                    Link(destination: URL(string: about.linkedin)!, label: {
                         Image("Linked_In", bundle: Bundle.module)
                             .linkImageModifier()
                     })
@@ -100,15 +100,15 @@ public struct AboutInfoView : View {
             
             VStack(alignment: .center, spacing: 5) {
                 HStack (spacing: 10){
-                    if let supportString = about.supportString {
-                        Link("Get support", destination: URL(string: supportString)!)
+                    if about.supportString != "" {
+                        Link("Get support", destination: URL(string: about.supportString)!)
 #if os(iOS)
                     .hoverWithPaddingModifier()
 #endif
                     }
 
-                    if let reviewString = about.reviewString {
-                        Link("Write a review", destination: URL(string: reviewString)!)
+                    if about.reviewString != "" {
+                        Link("Write a review", destination: URL(string: about.reviewString)!)
 #if os(iOS)
                     .hoverWithPaddingModifier()
 #endif

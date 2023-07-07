@@ -11,9 +11,9 @@ public struct AboutLogoView : View {
     @Environment(About.self) var about
     
     public var body : some View {
-        if let appName = about.appName {
-        Text(appName)
-            .font(.largeTitle)
+        if about.appName != "" {
+            Text(about.appName)
+                .font(.largeTitle)
         }
         Image(uiImage: about.logo)
             .resizable()

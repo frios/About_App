@@ -15,24 +15,24 @@ public class About {
 
     public var isPortrait : Bool = true
     
-    public var appName: String?
-    public var createdBy: String?
-    public var copyRight: String?
-    public var reservedRights: String?
-    public var misc: String?
-    public var companyName: String?
-    public var address1: String?
-    public var address2: String?
-    public var city: String?
-    public var state: String?
-    public var zip: String?
-    public var webURL: String?
-    public var twitter: String?
-    public var facebook: String?
-    public var linkedin: String?
-    public var instagram: String?
-    public var supportString: String?
-    public var reviewString: String?
+    public var appName = String()
+    public var createdBy = String()
+    public var copyRight = String()
+    public var reservedRights = String()
+    public var misc = String()
+    public var companyName = String()
+    public var address1 = String()
+    public var address2 = String()
+    public var city = String()
+    public var state = String()
+    public var zip = String()
+    public var webURL = String()
+    public var twitter = String()
+    public var facebook = String()
+    public var linkedin = String()
+    public var instagram = String()
+    public var supportString = String()
+    public var reviewString = String()
     
 #if os(iOS)
     let color = Color(UIColor(named: "AccentColor")!)
