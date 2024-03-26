@@ -34,23 +34,28 @@ public class About {
     public var supportString = String()
     public var reviewString = String()
     
-#if os(iOS)
-    let color = Color(UIColor(named: "AccentColor")!)
-#elseif os(macOS)
+#if os(macOS)
     let color = Color(NSColor(named: "AccentColor")!)
+#else
+    let color = Color(UIColor(named: "AccentColor")!)
 #endif
+    
     let version = "Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).\(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)"
     var logo: UIImage = Bundle.main.appIcon
 
     
     public init () {
-#if os(iOS)
+#if os(macOS)
+        
+#else
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
 #endif
     }
     
-#if os(iOS)
+#if os(macOS)
+
+#else
     @objc public func rotated() {
         switch UIDevice.current.orientation {
         case .faceDown, .faceUp, .portrait, .portraitUpsideDown, .unknown:
