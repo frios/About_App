@@ -45,17 +45,14 @@ public class About {
 
     
     public init () {
-#if os(macOS)
         
-#else
+#if os(iOS)
         self.isPortrait =  UIDevice.current.orientation.isPortrait
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
 #endif
     }
     
-#if os(macOS)
-
-#else
+#if os(iOS)
     @objc public func rotated() {
         switch UIDevice.current.orientation {
         case .faceDown, .faceUp, .portrait, .portraitUpsideDown, .unknown:
