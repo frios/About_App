@@ -12,19 +12,19 @@ public struct AboutInfoView : View {
 
     public var body : some View {
         VStack (spacing: 20) {
-            Text("\(about.version)")
+            Text(LocalizedStringKey(about.version))
                 .font(.caption)
                 .fontWeight(.bold)
             
             VStack() {
                 if about.copyRight != "" {
-                    Text(about.copyRight)
+                    Text(LocalizedStringKey(about.copyRight))
                 }
                 if about.reservedRights != "" {
-                    Text(about.reservedRights)
+                    Text(LocalizedStringKey(about.reservedRights))
                 }
                 if about.misc != "" {
-                    Text(about.misc)
+                    Text(LocalizedStringKey(about.misc))
                         .multilineTextAlignment(.center)
                 }
             }
@@ -32,7 +32,7 @@ public struct AboutInfoView : View {
             
             VStack() {
                 if about.createdBy != "" {
-                    Text("Created by:")
+                    Text(LocalizedStringKey("Created by:"))
                     Text(about.createdBy)
                 }
                 if about.companyName != "" {
@@ -101,14 +101,14 @@ public struct AboutInfoView : View {
             VStack(alignment: .center, spacing: 5) {
                 HStack (spacing: 10){
                     if about.supportString != "" {
-                        Link("Get support", destination: URL(string: about.supportString)!)
+                        Link(LocalizedStringKey("Get support"), destination: URL(string: about.supportString)!)
 #if os(iOS)
                     .hoverWithPaddingModifier()
 #endif
                     }
 
                     if about.reviewString != "" {
-                        Link("Write a review", destination: URL(string: about.reviewString)!)
+                        Link(LocalizedStringKey("Write a review"), destination: URL(string: about.reviewString)!)
 #if os(iOS)
                     .hoverWithPaddingModifier()
 #endif

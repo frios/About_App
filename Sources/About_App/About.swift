@@ -14,7 +14,6 @@ import UIKit
 public class About {
 
     public var isPortrait : Bool = true
-    
     public var appName = String()
     public var createdBy = String()
     public var copyRight = String()
